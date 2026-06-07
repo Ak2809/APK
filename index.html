@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vinayak Electronics – Premium Sales, Service & Solutions. Expert TV Repair, Amplifier Repair, Home Theater Installation, CCTV Installation, Sound Systems, Inverter Service in your city.">
+<meta name="keywords" content="TV Repair Near Me, Amplifier Repair, Electronics Service Center, Home Theater Installation, CCTV Installation, Electronics Repair Shop, Vinayak Electronics, Smart TV Repair, LED TV Service">
+<meta name="author" content="Vinayak Electronics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vinayakelectronics.in/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vinayakelectronics.in/">
+<meta property="og:title" content="Vinayak Electronics – Sales, Service & Solutions">
+<meta property="og:description" content="Professional TV, Amplifier, Sound System & Electronics Repair Experts. Trusted Service Center.">
+<meta property="og:image" content="https://vinayakelectronics.in/og-image.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vinayak Electronics – Sales, Service & Solutions">
+<meta name="twitter:description" content="Professional TV, Amplifier, Sound System & Electronics Repair Experts.">
+
+<title>Vinayak Electronics – Sales, Service & Solutions | TV Repair, Home Theater, CCTV</title>
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Vinayak Electronics",
+  "image": "https://vinayakelectronics.in/logo.jpg",
+  "description": "Premium electronics sales, service and solutions center specializing in LED TVs, Smart TVs, Home Theaters, Amplifiers, Sound Systems, CCTV, Inverters and UPS.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Main Market Road",
+    "addressLocality": "Your City",
+    "addressRegion": "Your State",
+    "postalCode": "000000",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-9999999999",
+  "openingHours": "Mo-Sa 09:00-20:00",
+  "url": "https://vinayakelectronics.in",
+  "sameAs": ["https://wa.me/919999999999"],
+  "priceRange": "₹₹",
+  "servesCuisine": "Electronics",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Electronics Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "TV Repair"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Amplifier Repair"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Home Theater Installation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "CCTV Installation"}}
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --electric: #00d4ff;
+  --neon-gold: #ffd700;
+  --plasma: #ff6b00;
+  --deep: #020b18;
+  --dark: #050f1e;
+  --card: #071828;
+  --card2: #0a2035;
+  --text: #e8f4fd;
+  --muted: #7a9bb5;
+  --glow-blue: 0 0 20px #00d4ff44, 0 0 60px #00d4ff22;
+  --glow-gold: 0 0 20px #ffd70044, 0 0 60px #ffd70022;
+  --border: rgba(0,212,255,0.15);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--deep);
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ─── CUSTOM CURSOR ─── */
+#cursor { position:fixed; width:12px; height:12px; background:var(--electric); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:transform .1s; mix-blend-mode:screen; }
+#cursor-ring { position:fixed; width:40px; height:40px; border:1px solid var(--electric); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:all .15s ease; opacity:.5; }
+body:hover #cursor { transform:translate(-50%,-50%) scale(1); }
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:var(--dark); }
+::-webkit-scrollbar-thumb { background:var(--electric); border-radius:2px; }
+
+/* ─── CANVAS BACKGROUND ─── */
+#bg-canvas { position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; }
+
+/* ─── CIRCUIT OVERLAY ─── */
+.circuit-overlay {
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  background-image:
+    linear-gradient(rgba(0,212,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index:1; pointer-events:none;
+  animation: gridPulse 4s ease-in-out infinite;
+}
+@keyframes gridPulse { 0%,100%{opacity:.3} 50%{opacity:.7} }
+
+/* ─── NAV ─── */
+nav {
+  position:fixed; top:0; width:100%; z-index:1000;
+  background:rgba(2,11,24,.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:0 5%;
+  display:flex; align-items:center; justify-content:space-between;
+  height:72px;
+  transition:all .3s;
+}
+nav.scrolled { height:60px; background:rgba(2,11,24,.97); }
+.nav-logo {
+  font-family:'Orbitron',sans-serif;
+  font-size:1.3rem; font-weight:900;
+  color:var(--electric);
+  text-decoration:none;
+  display:flex; align-items:center; gap:.6rem;
+  letter-spacing:.05em;
+}
+.nav-logo span { color:var(--neon-gold); }
+.logo-icon { width:36px; height:36px; position:relative; }
+.logo-icon svg { width:100%; height:100%; }
+
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a {
+  color:var(--muted); text-decoration:none;
+  font-family:'Rajdhani',sans-serif; font-size:1rem; font-weight:600;
+  letter-spacing:.05em; text-transform:uppercase;
+  transition:color .2s; position:relative; padding-bottom:4px;
+}
+.nav-links a::after {
+  content:''; position:absolute; bottom:0; left:0; width:0; height:1px;
+  background:var(--electric); transition:width .3s;
+}
+.nav-links a:hover { color:var(--electric); }
+.nav-links a:hover::after { width:100%; }
+
+.nav-cta {
+  background:var(--electric); color:var(--deep);
+  padding:.5rem 1.4rem; border-radius:4px;
+  font-family:'Orbitron',sans-serif; font-size:.75rem; font-weight:700;
+  text-decoration:none; letter-spacing:.08em;
+  transition:all .2s; box-shadow:var(--glow-blue);
+}
+.nav-cta:hover { background:var(--neon-gold); color:var(--deep); box-shadow:var(--glow-gold); }
+
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.hamburger span { width:24px; height:2px; background:var(--electric); transition:.3s; }
+
+/* ─── SECTION BASE ─── */
+section { position:relative; z-index:2; }
+.container { max-width:1280px; margin:0 auto; padding:0 5%; }
+
+.section-tag {
+  font-family:'Share Tech Mono',monospace;
+  color:var(--electric); font-size:.75rem; letter-spacing:.3em;
+  text-transform:uppercase; margin-bottom:.8rem;
+  display:flex; align-items:center; gap:.6rem;
+}
+.section-tag::before { content:''; width:30px; height:1px; background:var(--electric); }
+
+.section-title {
+  font-family:'Orbitron',sans-serif; font-weight:900;
+  font-size:clamp(2rem,4vw,3.2rem);
+  line-height:1.1; margin-bottom:1rem;
+}
+.section-title .accent { color:var(--electric); }
+.section-title .gold { color:var(--neon-gold); }
+
+.section-sub {
+  color:var(--muted); font-size:1.1rem; line-height:1.7;
+  max-width:600px;
+}
+
+/* ─── HERO ─── */
+#hero {
+  min-height:100vh; display:flex; align-items:center;
+  padding:100px 5% 60px;
+  position:relative; overflow:hidden;
+}
+
+.hero-bg-glow {
+  position:absolute; top:20%; left:50%; transform:translateX(-50%);
+  width:900px; height:900px;
+  background:radial-gradient(ellipse, rgba(0,212,255,.07) 0%, transparent 70%);
+  pointer-events:none;
+  animation: heroGlow 5s ease-in-out infinite alternate;
+}
+@keyframes heroGlow { 0%{opacity:.5;transform:translateX(-50%) scale(1)} 100%{opacity:1;transform:translateX(-50%) scale(1.1)} }
+
+.hero-content { position:relative; z-index:3; max-width:700px; }
+
+.hero-eyebrow {
+  font-family:'Share Tech Mono',monospace;
+  color:var(--electric); font-size:.8rem; letter-spacing:.4em;
+  text-transform:uppercase; margin-bottom:1.5rem;
+  display:flex; align-items:center; gap:1rem;
+  opacity:0; animation: fadeUp .8s .2s forwards;
+}
+.hero-eyebrow::before {
+  content:''; width:40px; height:1px; background:var(--electric);
+}
+.eyebrow-dot { width:6px; height:6px; background:var(--electric); border-radius:50%; animation:pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(0,212,255,.6)} 50%{box-shadow:0 0 0 8px rgba(0,212,255,0)} }
+
+.hero-title {
+  font-family:'Orbitron',sans-serif; font-weight:900;
+  font-size:clamp(2.5rem,5.5vw,5rem);
+  line-height:1.05; margin-bottom:1.2rem;
+  opacity:0; animation: fadeUp .8s .4s forwards;
+}
+.hero-title .line1 { display:block; color:var(--text); }
+.hero-title .line2 { display:block; color:var(--electric); text-shadow:0 0 40px var(--electric); }
+.hero-title .line3 { display:block; color:var(--neon-gold); }
+
+.hero-sub {
+  font-size:1.2rem; color:var(--muted); line-height:1.7;
+  margin-bottom:2.5rem;
+  opacity:0; animation: fadeUp .8s .6s forwards;
+}
+.hero-sub strong { color:var(--text); }
+
+.hero-badges {
+  display:flex; flex-wrap:wrap; gap:.7rem; margin-bottom:2.5rem;
+  opacity:0; animation: fadeUp .8s .7s forwards;
+}
+.badge {
+  font-family:'Share Tech Mono',monospace; font-size:.72rem;
+  border:1px solid var(--border); color:var(--electric);
+  padding:.3rem .8rem; border-radius:3px;
+  background:rgba(0,212,255,.05);
+  letter-spacing:.1em; text-transform:uppercase;
+}
+
+.hero-btns {
+  display:flex; flex-wrap:wrap; gap:1rem;
+  opacity:0; animation: fadeUp .8s .8s forwards;
+}
+
+.btn-primary {
+  background:var(--electric); color:var(--deep);
+  padding:.9rem 2rem; border:none; border-radius:4px;
+  font-family:'Orbitron',sans-serif; font-size:.8rem; font-weight:700;
+  letter-spacing:.1em; text-decoration:none; cursor:pointer;
+  transition:all .25s; box-shadow:var(--glow-blue);
+  display:inline-flex; align-items:center; gap:.6rem;
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 0 40px rgba(0,212,255,.5); background:#00eeff; }
+
+.btn-secondary {
+  background:transparent; color:var(--electric);
+  padding:.9rem 2rem; border:1px solid var(--electric); border-radius:4px;
+  font-family:'Orbitron',sans-serif; font-size:.8rem; font-weight:700;
+  letter-spacing:.1em; text-decoration:none; cursor:pointer;
+  transition:all .25s;
+  display:inline-flex; align-items:center; gap:.6rem;
+}
+.btn-secondary:hover { background:rgba(0,212,255,.1); transform:translateY(-2px); }
+
+.btn-whatsapp {
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:white; padding:.9rem 2rem; border:none; border-radius:4px;
+  font-family:'Orbitron',sans-serif; font-size:.8rem; font-weight:700;
+  letter-spacing:.1em; text-decoration:none; cursor:pointer;
+  transition:all .25s; box-shadow:0 0 20px rgba(37,211,102,.3);
+  display:inline-flex; align-items:center; gap:.6rem;
+}
+.btn-whatsapp:hover { transform:translateY(-2px); box-shadow:0 0 40px rgba(37,211,102,.5); }
+
+/* Hero floating visuals */
+.hero-visual {
+  position:absolute; right:2%; top:50%; transform:translateY(-50%);
+  width:45%; max-width:580px; pointer-events:none;
+  opacity:0; animation: fadeRight 1s .5s forwards;
+}
+
+.tv-3d {
+  width:100%; position:relative;
+}
+.tv-screen {
+  width:90%; aspect-ratio:16/9;
+  background:linear-gradient(135deg,#0a2035,#071828);
+  border:3px solid rgba(0,212,255,.3);
+  border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden;
+  box-shadow:0 0 40px rgba(0,212,255,.2), inset 0 0 60px rgba(0,212,255,.05);
+  animation: tvFloat 4s ease-in-out infinite;
+}
+@keyframes tvFloat { 0%,100%{transform:translateY(0) rotateY(-5deg)} 50%{transform:translateY(-15px) rotateY(-8deg)} }
+
+.tv-screen::before {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(transparent 49%, rgba(0,212,255,.03) 50%, transparent 51%);
+  background-size:100% 6px;
+  animation:scanline 8s linear infinite;
+}
+@keyframes scanline { 0%{background-position:0 0} 100%{background-position:0 100%} }
+
+.tv-inner-glow {
+  position:absolute; width:60%; height:60%;
+  background:radial-gradient(ellipse, rgba(0,212,255,.15) 0%, transparent 70%);
+  animation:innerGlow 3s ease-in-out infinite alternate;
+}
+@keyframes innerGlow { 0%{opacity:.5;transform:scale(1)} 100%{opacity:1;transform:scale(1.2)} }
+
+.tv-brand {
+  position:absolute; bottom:8px; left:50%; transform:translateX(-50%);
+  font-family:'Orbitron',sans-serif; font-size:.6rem; color:rgba(0,212,255,.6);
+  letter-spacing:.3em;
+}
+
+.tv-stand {
+  width:20%; height:12px; background:linear-gradient(var(--card),var(--card2));
+  margin:0 auto -4px; border-radius:3px;
+  border:1px solid rgba(0,212,255,.2);
+}
+.tv-base {
+  width:40%; height:8px; background:linear-gradient(var(--card),var(--card2));
+  margin:0 auto; border-radius:4px;
+  border:1px solid rgba(0,212,255,.2);
+}
+
+/* Floating speakers */
+.speaker-float {
+  position:absolute; opacity:0.6;
+}
+.speaker-float:nth-child(1) { top:-30px; right:-20px; width:80px; animation:speakerFloat1 6s ease-in-out infinite; }
+.speaker-float:nth-child(2) { bottom:20px; right:-30px; width:60px; animation:speakerFloat2 7s ease-in-out infinite; }
+@keyframes speakerFloat1 { 0%,100%{transform:translateY(0) rotate(-5deg)} 50%{transform:translateY(-20px) rotate(5deg)} }
+@keyframes speakerFloat2 { 0%,100%{transform:translateY(0) rotate(5deg)} 50%{transform:translateY(-15px) rotate(-5deg)} }
+
+/* Sound waves */
+.sound-wave {
+  position:absolute; bottom:-40px; left:50%;
+  transform:translateX(-50%);
+  display:flex; align-items:flex-end; gap:3px;
+}
+.wave-bar {
+  width:3px; background:var(--electric); border-radius:2px;
+  opacity:.6; animation:waveAnim 1.2s ease-in-out infinite;
+}
+.wave-bar:nth-child(1){height:12px;animation-delay:0s}
+.wave-bar:nth-child(2){height:22px;animation-delay:.1s}
+.wave-bar:nth-child(3){height:35px;animation-delay:.2s}
+.wave-bar:nth-child(4){height:50px;animation-delay:.3s}
+.wave-bar:nth-child(5){height:35px;animation-delay:.4s}
+.wave-bar:nth-child(6){height:22px;animation-delay:.5s}
+.wave-bar:nth-child(7){height:12px;animation-delay:.6s}
+@keyframes waveAnim { 0%,100%{transform:scaleY(.4)} 50%{transform:scaleY(1)} }
+
+/* Hero stats */
+.hero-stats {
+  display:flex; gap:2.5rem; margin-top:3rem;
+  opacity:0; animation: fadeUp .8s 1s forwards;
+  padding-top:2.5rem;
+  border-top:1px solid var(--border);
+}
+.stat-item { text-align:left; }
+.stat-num {
+  font-family:'Orbitron',sans-serif; font-size:2rem; font-weight:900;
+  color:var(--electric);
+}
+.stat-num .gold { color:var(--neon-gold); }
+.stat-label { font-family:'Rajdhani',sans-serif; color:var(--muted); font-size:.85rem; letter-spacing:.1em; text-transform:uppercase; margin-top:.2rem; }
+
+/* ─── TICKER ─── */
+.ticker {
+  position:relative; z-index:2;
+  background:var(--electric); padding:.6rem 0; overflow:hidden;
+}
+.ticker-inner {
+  display:flex; white-space:nowrap;
+  animation:ticker 30s linear infinite;
+}
+.ticker-item {
+  font-family:'Orbitron',sans-serif; font-size:.72rem; font-weight:700;
+  color:var(--deep); padding:0 2rem; letter-spacing:.1em; text-transform:uppercase;
+  display:flex; align-items:center; gap:.8rem;
+}
+.ticker-item::after { content:'◆'; opacity:.5; }
+@keyframes ticker { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ─── SERVICES ─── */
+#services { padding:100px 0; }
+.services-header { text-align:center; margin-bottom:70px; }
+.services-header .section-tag { justify-content:center; }
+
+.services-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+
+.service-card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px; padding:2rem;
+  position:relative; overflow:hidden;
+  transition:all .4s cubic-bezier(.4,0,.2,1);
+  cursor:pointer;
+}
+.service-card::before {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(135deg, rgba(0,212,255,.06) 0%, transparent 60%);
+  opacity:0; transition:opacity .3s;
+}
+.service-card::after {
+  content:''; position:absolute; top:0; left:-100%;
+  width:100%; height:2px;
+  background:linear-gradient(90deg, transparent, var(--electric), transparent);
+  transition:left .5s ease;
+}
+.service-card:hover::before { opacity:1; }
+.service-card:hover::after { left:100%; }
+.service-card:hover {
+  transform:translateY(-6px);
+  border-color:rgba(0,212,255,.4);
+  box-shadow:0 20px 60px rgba(0,212,255,.1);
+}
+
+.service-icon {
+  width:60px; height:60px; margin-bottom:1.5rem;
+  background:rgba(0,212,255,.08);
+  border:1px solid rgba(0,212,255,.2);
+  border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.8rem;
+  transition:all .3s;
+  position:relative;
+}
+.service-card:hover .service-icon {
+  background:rgba(0,212,255,.15);
+  box-shadow:0 0 30px rgba(0,212,255,.2);
+  transform:scale(1.1) rotate(5deg);
+}
+
+.service-card-title {
+  font-family:'Orbitron',sans-serif; font-size:1rem; font-weight:700;
+  color:var(--text); margin-bottom:.7rem; letter-spacing:.03em;
+}
+.service-card-desc { color:var(--muted); font-size:.95rem; line-height:1.6; }
+
+.service-card-footer {
+  margin-top:1.5rem; padding-top:1.2rem;
+  border-top:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+}
+.service-link {
+  font-family:'Orbitron',sans-serif; font-size:.7rem; color:var(--electric);
+  text-decoration:none; letter-spacing:.1em;
+  display:flex; align-items:center; gap:.4rem;
+  transition:gap .2s;
+}
+.service-link:hover { gap:.8rem; }
+.service-price {
+  font-family:'Share Tech Mono',monospace; font-size:.8rem;
+  color:var(--neon-gold);
+}
+
+/* ─── WHY US ─── */
+#why { padding:80px 0; }
+.why-inner {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:80px; align-items:center;
+}
+.why-features { display:grid; gap:1.2rem; }
+.why-feature {
+  display:flex; align-items:flex-start; gap:1rem;
+  padding:1.2rem; border-radius:8px;
+  border:1px solid transparent;
+  transition:all .3s;
+}
+.why-feature:hover { background:var(--card); border-color:var(--border); }
+.feature-num {
+  font-family:'Orbitron',sans-serif; font-size:1.5rem; font-weight:900;
+  color:var(--electric); min-width:50px; opacity:.5; line-height:1;
+}
+.feature-body h4 { font-family:'Orbitron',sans-serif; font-size:.9rem; margin-bottom:.4rem; letter-spacing:.03em; }
+.feature-body p { color:var(--muted); font-size:.9rem; line-height:1.6; }
+
+.why-visual {
+  position:relative; display:flex; align-items:center; justify-content:center;
+}
+.hexgrid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+  transform:rotate(-10deg);
+}
+.hex-item {
+  aspect-ratio:1; border-radius:16px;
+  background:var(--card); border:1px solid var(--border);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:.4rem; font-size:2rem;
+  transition:all .4s; cursor:default;
+  animation:hexPop 6s ease-in-out infinite;
+}
+.hex-item:nth-child(2n){animation-delay:1s}
+.hex-item:nth-child(3n){animation-delay:2s}
+@keyframes hexPop { 0%,100%{transform:scale(1);border-color:rgba(0,212,255,.15)} 50%{transform:scale(1.05);border-color:rgba(0,212,255,.4);box-shadow:0 0 20px rgba(0,212,255,.15)} }
+.hex-item p { font-family:'Share Tech Mono',monospace; font-size:.6rem; color:var(--muted); letter-spacing:.1em; }
+
+/* ─── PRODUCTS ─── */
+#products { padding:100px 0; }
+.products-header { text-align:center; margin-bottom:50px; }
+.products-header .section-tag { justify-content:center; }
+
+.products-tabs {
+  display:flex; justify-content:center; gap:.5rem;
+  margin-bottom:50px; flex-wrap:wrap;
+}
+.tab-btn {
+  padding:.5rem 1.4rem; border-radius:30px; border:1px solid var(--border);
+  background:transparent; color:var(--muted);
+  font-family:'Rajdhani',sans-serif; font-size:.95rem; font-weight:600;
+  letter-spacing:.08em; cursor:pointer; transition:all .3s;
+}
+.tab-btn.active, .tab-btn:hover {
+  background:var(--electric); color:var(--deep); border-color:var(--electric);
+}
+
+.products-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1.5rem;
+}
+
+.product-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; overflow:hidden;
+  transition:all .4s; cursor:pointer;
+  position:relative;
+}
+.product-card:hover {
+  transform:translateY(-8px);
+  border-color:rgba(0,212,255,.4);
+  box-shadow:0 30px 80px rgba(0,212,255,.08);
+}
+
+.product-img {
+  width:100%; aspect-ratio:16/10;
+  background:linear-gradient(135deg,var(--dark),var(--card2));
+  display:flex; align-items:center; justify-content:center;
+  font-size:5rem; position:relative; overflow:hidden;
+}
+.product-img::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at center, rgba(0,212,255,.08) 0%, transparent 70%);
+}
+.product-img span { position:relative; z-index:1; transition:transform .4s; }
+.product-card:hover .product-img span { transform:scale(1.15) rotate(5deg); }
+
+.product-badge {
+  position:absolute; top:12px; left:12px;
+  background:var(--plasma); color:white;
+  font-family:'Orbitron',sans-serif; font-size:.6rem; font-weight:700;
+  padding:.25rem .6rem; border-radius:3px; letter-spacing:.08em;
+}
+
+.product-info { padding:1.5rem; }
+.product-name {
+  font-family:'Orbitron',sans-serif; font-size:.95rem; font-weight:700;
+  margin-bottom:.4rem; color:var(--text);
+}
+.product-brand { color:var(--muted); font-size:.85rem; margin-bottom:.7rem; }
+.product-rating { display:flex; gap:2px; margin-bottom:.7rem; }
+.star { color:var(--neon-gold); font-size:.85rem; }
+.star.half { opacity:.4; }
+
+.product-price-row { display:flex; justify-content:space-between; align-items:center; }
+.product-price {
+  font-family:'Orbitron',sans-serif; font-size:1.2rem; font-weight:900; color:var(--electric);
+}
+.product-price .old { font-size:.75rem; color:var(--muted); text-decoration:line-through; margin-left:.5rem; }
+.product-cta {
+  background:transparent; border:1px solid var(--electric); color:var(--electric);
+  padding:.4rem .9rem; border-radius:4px;
+  font-family:'Orbitron',sans-serif; font-size:.65rem; font-weight:700;
+  cursor:pointer; transition:all .2s; letter-spacing:.08em;
+}
+.product-cta:hover { background:var(--electric); color:var(--deep); }
+
+/* ─── ABOUT ─── */
+#about { padding:100px 0; }
+.about-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.about-visual-block { position:relative; }
+.about-img-frame {
+  width:100%; aspect-ratio:4/3;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.about-img-inner {
+  display:grid; grid-template-columns:1fr 1fr; gap:1rem; padding:1.5rem; width:100%;
+}
+.about-metric {
+  background:var(--card2); border:1px solid var(--border);
+  border-radius:8px; padding:1.2rem; text-align:center;
+  transition:all .3s;
+}
+.about-metric:hover { border-color:rgba(0,212,255,.4); transform:scale(1.03); }
+.about-metric-num {
+  font-family:'Orbitron',sans-serif; font-size:1.8rem; font-weight:900;
+  color:var(--electric); display:block;
+}
+.about-metric-label { color:var(--muted); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; }
+
+.about-corner {
+  position:absolute; padding:.8rem 1.2rem;
+  background:var(--electric); color:var(--deep);
+  border-radius:8px; font-family:'Orbitron',sans-serif;
+  font-size:.75rem; font-weight:700; white-space:nowrap;
+}
+.about-corner.tl { top:-15px; left:-15px; }
+.about-corner.br { bottom:-15px; right:-15px; background:var(--neon-gold); }
+
+.about-text .section-tag { margin-bottom:.5rem; }
+.about-timeline { margin-top:2rem; display:grid; gap:1.2rem; }
+.timeline-item { display:flex; gap:1rem; align-items:flex-start; }
+.timeline-year {
+  font-family:'Orbitron',sans-serif; font-size:.75rem; font-weight:700;
+  color:var(--electric); min-width:60px; padding-top:.2rem;
+}
+.timeline-body { padding-left:1rem; border-left:1px solid var(--border); }
+.timeline-body h4 { font-size:.95rem; margin-bottom:.2rem; }
+.timeline-body p { color:var(--muted); font-size:.85rem; }
+
+/* ─── STATS COUNTER ─── */
+#stats {
+  padding:70px 0;
+  background:linear-gradient(135deg,var(--card) 0%, var(--dark) 100%);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.stats-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:2rem; text-align:center;
+}
+.counter-block { padding:1.5rem; }
+.counter-num {
+  font-family:'Orbitron',sans-serif; font-size:3.5rem; font-weight:900;
+  color:var(--electric); line-height:1;
+  display:block;
+}
+.counter-num.gold { color:var(--neon-gold); }
+.counter-label { color:var(--muted); font-size:.9rem; letter-spacing:.15em; text-transform:uppercase; margin-top:.5rem; display:block; }
+.counter-icon { font-size:2rem; margin-bottom:.8rem; display:block; }
+
+/* ─── GALLERY ─── */
+#gallery { padding:100px 0; }
+.gallery-header { text-align:center; margin-bottom:50px; }
+.gallery-header .section-tag { justify-content:center; }
+
+.gallery-filters {
+  display:flex; justify-content:center; gap:.5rem; margin-bottom:2rem; flex-wrap:wrap;
+}
+.filter-btn {
+  padding:.4rem 1.2rem; border-radius:30px;
+  border:1px solid var(--border); background:transparent;
+  color:var(--muted); font-family:'Rajdhani',sans-serif; font-size:.9rem; font-weight:600;
+  letter-spacing:.08em; cursor:pointer; transition:all .3s;
+}
+.filter-btn.active, .filter-btn:hover { background:var(--electric); color:var(--deep); border-color:var(--electric); }
+
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:200px;
+  gap:1rem;
+}
+.gallery-item {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:10px; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  font-size:4rem; cursor:pointer; position:relative;
+  transition:all .4s;
+}
+.gallery-item:hover { transform:scale(1.02); border-color:rgba(0,212,255,.4); box-shadow:0 10px 40px rgba(0,212,255,.1); }
+.gallery-item.wide { grid-column:span 2; }
+.gallery-item.tall { grid-row:span 2; }
+
+.gallery-overlay {
+  position:absolute; inset:0;
+  background:rgba(0,20,40,.8);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  opacity:0; transition:opacity .3s;
+  padding:1rem;
+}
+.gallery-item:hover .gallery-overlay { opacity:1; }
+.gallery-overlay h4 {
+  font-family:'Orbitron',sans-serif; font-size:.85rem;
+  color:var(--electric); margin-bottom:.4rem;
+}
+.gallery-overlay p { color:var(--muted); font-size:.8rem; text-align:center; }
+
+/* ─── TESTIMONIALS ─── */
+#testimonials { padding:100px 0; }
+.testimonials-header { text-align:center; margin-bottom:60px; }
+.testimonials-header .section-tag { justify-content:center; }
+
+.testimonials-carousel { position:relative; overflow:hidden; }
+.testimonials-track {
+  display:flex; transition:transform .6s cubic-bezier(.4,0,.2,1);
+}
+.testimonial-card {
+  min-width:calc(33.33% - 1rem);
+  margin-right:1.5rem;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; padding:2rem;
+  flex-shrink:0;
+}
+.testimonial-stars { display:flex; gap:3px; margin-bottom:1rem; }
+.t-star { color:var(--neon-gold); }
+.testimonial-text {
+  color:var(--muted); font-size:.98rem; line-height:1.7;
+  margin-bottom:1.5rem; font-style:italic;
+}
+.testimonial-text::before { content:'"'; color:var(--electric); font-size:2rem; line-height:.5; vertical-align:-.5rem; }
+.testimonial-author {
+  display:flex; align-items:center; gap:.8rem;
+  border-top:1px solid var(--border); padding-top:1rem;
+}
+.author-avatar {
+  width:42px; height:42px; border-radius:50%;
+  background:linear-gradient(135deg,var(--electric),var(--neon-gold));
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Orbitron',sans-serif; font-weight:700; color:var(--deep); font-size:.9rem;
+}
+.author-name { font-family:'Orbitron',sans-serif; font-size:.85rem; }
+.author-location { color:var(--muted); font-size:.78rem; }
+.author-verified { color:var(--electric); font-size:.7rem; margin-top:.1rem; }
+
+.carousel-controls { display:flex; justify-content:center; gap:.8rem; margin-top:2rem; }
+.carousel-btn {
+  width:40px; height:40px; border-radius:50%;
+  border:1px solid var(--border); background:transparent;
+  color:var(--electric); cursor:pointer; font-size:1.1rem;
+  transition:all .3s; display:flex; align-items:center; justify-content:center;
+}
+.carousel-btn:hover { background:var(--electric); color:var(--deep); border-color:var(--electric); }
+.carousel-dots { display:flex; align-items:center; gap:.5rem; }
+.dot { width:8px; height:8px; border-radius:50%; background:var(--border); transition:.3s; cursor:pointer; }
+.dot.active { background:var(--electric); width:24px; border-radius:4px; }
+
+/* ─── CONTACT ─── */
+#contact { padding:100px 0; }
+.contact-inner { display:grid; grid-template-columns:1fr 1.3fr; gap:80px; align-items:start; }
+
+.contact-info { }
+.contact-info .section-tag { margin-bottom:.5rem; }
+.contact-details { margin-top:2rem; display:grid; gap:1rem; }
+.contact-item {
+  display:flex; gap:1rem; align-items:flex-start;
+  padding:1.2rem; border:1px solid var(--border);
+  border-radius:8px; background:var(--card); transition:.3s;
+}
+.contact-item:hover { border-color:rgba(0,212,255,.3); }
+.contact-item-icon { font-size:1.3rem; min-width:36px; }
+.contact-item-body h4 { font-family:'Orbitron',sans-serif; font-size:.8rem; color:var(--electric); margin-bottom:.3rem; letter-spacing:.08em; }
+.contact-item-body p { color:var(--muted); font-size:.9rem; }
+.contact-item-body a { color:var(--text); text-decoration:none; }
+.contact-item-body a:hover { color:var(--electric); }
+
+.hours-grid { display:grid; grid-template-columns:1fr 1fr; gap:.4rem; margin-top:.5rem; }
+.hours-row { font-size:.82rem; }
+.hours-row span:first-child { color:var(--muted); }
+.hours-row span:last-child { color:var(--electric); margin-left:.5rem; }
+
+/* Form */
+.contact-form-wrap {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:2.5rem;
+}
+.form-title {
+  font-family:'Orbitron',sans-serif; font-size:1.1rem; font-weight:700;
+  margin-bottom:1.8rem; color:var(--electric);
+}
+
+.form-group { margin-bottom:1.2rem; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+
+label {
+  display:block; font-family:'Share Tech Mono',monospace;
+  font-size:.72rem; color:var(--muted); letter-spacing:.15em;
+  text-transform:uppercase; margin-bottom:.5rem;
+}
+
+input, select, textarea {
+  width:100%; padding:.85rem 1rem;
+  background:rgba(0,212,255,.03);
+  border:1px solid var(--border);
+  border-radius:6px; color:var(--text);
+  font-family:'Rajdhani',sans-serif; font-size:1rem;
+  transition:all .3s; outline:none;
+}
+input:focus, select:focus, textarea:focus {
+  border-color:var(--electric);
+  background:rgba(0,212,255,.06);
+  box-shadow:0 0 0 3px rgba(0,212,255,.08);
+}
+input::placeholder, textarea::placeholder { color:rgba(120,155,181,.5); }
+select option { background:var(--dark); }
+textarea { resize:vertical; min-height:110px; }
+
+.form-submit {
+  width:100%; padding:1rem;
+  background:var(--electric); color:var(--deep);
+  border:none; border-radius:6px;
+  font-family:'Orbitron',sans-serif; font-size:.85rem; font-weight:700;
+  letter-spacing:.1em; cursor:pointer; margin-top:.5rem;
+  transition:all .3s; box-shadow:var(--glow-blue);
+  display:flex; align-items:center; justify-content:center; gap:.6rem;
+}
+.form-submit:hover { background:#00eeff; transform:translateY(-2px); box-shadow:0 0 40px rgba(0,212,255,.4); }
+.form-submit:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+
+.form-success {
+  display:none; text-align:center; padding:2rem;
+  background:rgba(0,212,255,.05); border:1px solid rgba(0,212,255,.2);
+  border-radius:8px; margin-top:1rem;
+}
+.form-success.show { display:block; }
+.form-success h3 { font-family:'Orbitron',sans-serif; color:var(--electric); margin-bottom:.5rem; }
+.form-success p { color:var(--muted); }
+
+.form-error-msg { color:#ff4444; font-size:.78rem; margin-top:.3rem; display:none; }
+.form-group.error input, .form-group.error select, .form-group.error textarea { border-color:#ff4444; }
+.form-group.error .form-error-msg { display:block; }
+
+/* ─── FAQ ─── */
+#faq { padding:80px 0; background:var(--dark); }
+.faq-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+.faq-list { display:grid; gap:.8rem; }
+.faq-item {
+  border:1px solid var(--border); border-radius:8px;
+  overflow:hidden; background:var(--card);
+}
+.faq-q {
+  width:100%; display:flex; justify-content:space-between; align-items:center;
+  padding:1.1rem 1.4rem; background:transparent; border:none;
+  color:var(--text); font-family:'Rajdhani',sans-serif; font-size:1rem; font-weight:600;
+  cursor:pointer; text-align:left; transition:.3s; gap:1rem;
+}
+.faq-q:hover { color:var(--electric); }
+.faq-q span { color:var(--electric); font-size:1.2rem; transition:transform .3s; min-width:20px; text-align:center; }
+.faq-item.open .faq-q span { transform:rotate(45deg); }
+.faq-a {
+  max-height:0; overflow:hidden; transition:max-height .4s ease;
+  padding:0 1.4rem; color:var(--muted); font-size:.95rem; line-height:1.7;
+}
+.faq-item.open .faq-a { max-height:200px; padding:0 1.4rem 1.2rem; }
+
+/* ─── FOOTER ─── */
+footer {
+  background:var(--dark);
+  border-top:1px solid var(--border);
+  padding:60px 0 30px;
+}
+.footer-grid {
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:3rem;
+}
+.footer-brand .nav-logo { font-size:1.1rem; margin-bottom:1rem; display:inline-flex; }
+.footer-brand p { color:var(--muted); font-size:.9rem; line-height:1.7; max-width:280px; }
+.footer-social { display:flex; gap:.7rem; margin-top:1.2rem; }
+.social-btn {
+  width:36px; height:36px; border-radius:50%;
+  border:1px solid var(--border); background:var(--card);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--muted); text-decoration:none; font-size:.85rem;
+  transition:.3s;
+}
+.social-btn:hover { border-color:var(--electric); color:var(--electric); background:rgba(0,212,255,.08); }
+
+.footer-col h4 {
+  font-family:'Orbitron',sans-serif; font-size:.8rem; color:var(--electric);
+  letter-spacing:.1em; margin-bottom:1.2rem; text-transform:uppercase;
+}
+.footer-links { list-style:none; display:grid; gap:.6rem; }
+.footer-links a { color:var(--muted); text-decoration:none; font-size:.9rem; transition:.2s; }
+.footer-links a:hover { color:var(--electric); padding-left:.3rem; }
+
+.footer-bottom {
+  display:flex; justify-content:space-between; align-items:center;
+  padding-top:2rem; border-top:1px solid var(--border);
+  flex-wrap:wrap; gap:1rem;
+}
+.footer-bottom p { color:var(--muted); font-size:.82rem; }
+.footer-bottom a { color:var(--electric); text-decoration:none; }
+
+/* ─── FLOATING WHATSAPP ─── */
+.whatsapp-float {
+  position:fixed; bottom:2rem; right:2rem; z-index:500;
+  width:56px; height:56px; border-radius:50%;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.6rem; text-decoration:none; color:white;
+  box-shadow:0 4px 20px rgba(37,211,102,.4);
+  transition:.3s; animation:waBounce 2s ease-in-out infinite;
+}
+.whatsapp-float:hover { transform:scale(1.1); box-shadow:0 8px 30px rgba(37,211,102,.5); }
+@keyframes waBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeRight { from{opacity:0;transform:translateX(60px)} to{opacity:1;transform:translateX(0)} }
+
+.reveal { opacity:0; transform:translateY(40px); transition:all .8s cubic-bezier(.4,0,.2,1); }
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-left { opacity:0; transform:translateX(-40px); transition:all .8s cubic-bezier(.4,0,.2,1); }
+.reveal-left.visible { opacity:1; transform:translateX(0); }
+.reveal-right { opacity:0; transform:translateX(40px); transition:all .8s cubic-bezier(.4,0,.2,1); }
+.reveal-right.visible { opacity:1; transform:translateX(0); }
+
+/* ─── MOBILE ─── */
+@media (max-width:768px) {
+  .nav-links, .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .hero-visual { display:none; }
+  .hero-title { font-size:2.2rem; }
+  .hero-stats { flex-wrap:wrap; gap:1.5rem; }
+  .why-inner, .about-inner, .contact-inner, .faq-inner { grid-template-columns:1fr; }
+  .gallery-grid { grid-template-columns:1fr 1fr; }
+  .gallery-item.wide { grid-column:span 1; }
+  .gallery-item.tall { grid-row:span 1; }
+  .testimonial-card { min-width:90%; }
+  .footer-grid { grid-template-columns:1fr 1fr; gap:2rem; }
+  .footer-bottom { flex-direction:column; text-align:center; }
+  .form-row { grid-template-columns:1fr; }
+  .hexgrid { display:none; }
+}
+
+@media (max-width:480px) {
+  .footer-grid { grid-template-columns:1fr; }
+  .services-grid { grid-template-columns:1fr; }
+  .products-grid { grid-template-columns:1fr; }
+}
+
+/* ─── PRELOADER ─── */
+#preloader {
+  position:fixed; inset:0; background:var(--deep); z-index:9999;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2rem;
+  transition:opacity .6s;
+}
+.preloader-logo { font-family:'Orbitron',sans-serif; font-size:1.5rem; font-weight:900; color:var(--electric); letter-spacing:.1em; }
+.preloader-bar { width:200px; height:2px; background:var(--border); border-radius:2px; overflow:hidden; }
+.preloader-fill { height:100%; background:var(--electric); border-radius:2px; animation:preload 2s ease forwards; }
+@keyframes preload { 0%{width:0} 100%{width:100%} }
+.preloader-text { font-family:'Share Tech Mono',monospace; font-size:.7rem; color:var(--muted); letter-spacing:.3em; }
+
+/* Glitch text effect */
+.glitch { position:relative; }
+.glitch::before,.glitch::after {
+  content:attr(data-text); position:absolute; left:0; top:0;
+  width:100%; overflow:hidden;
+}
+.glitch::before { color:var(--electric); animation:glitch1 4s infinite; clip-path:polygon(0 0,100% 0,100% 35%,0 35%); left:2px; }
+.glitch::after { color:var(--plasma); animation:glitch2 4s infinite; clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%); left:-2px; }
+@keyframes glitch1 { 0%,90%,100%{opacity:0} 92%,94%{opacity:.5} }
+@keyframes glitch2 { 0%,88%,100%{opacity:0} 90%,96%{opacity:.5} }
+
+/* Neon line dividers */
+.neon-divider {
+  height:1px; margin:0;
+  background:linear-gradient(90deg, transparent, var(--electric), transparent);
+  position:relative; z-index:2;
+}
+</style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="preloader-logo">⚡ VINAYAK ELECTRONICS</div>
+  <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  <div class="preloader-text">LOADING SYSTEMS...</div>
+</div>
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Background Canvas -->
+<canvas id="bg-canvas"></canvas>
+<div class="circuit-overlay"></div>
+
+<!-- ─── NAV ─── -->
+<nav id="main-nav" aria-label="Main Navigation">
+  <a href="#" class="nav-logo" aria-label="Vinayak Electronics Home">
+    <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="8" width="32" height="20" rx="3" stroke="#00d4ff" stroke-width="2"/>
+      <rect x="8" y="14" width="20" height="8" fill="none" stroke="#00d4ff" stroke-width="1.5"/>
+      <circle cx="18" cy="18" r="3" fill="#ffd700"/>
+      <path d="M14 28 L18 32 L22 28" stroke="#00d4ff" stroke-width="1.5"/>
+      <path d="M12 32 L24 32" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    VINAYAK <span>ELECTRONICS</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/919999999999" class="nav-cta" target="_blank" rel="noopener">WhatsApp Now</a>
+  <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg-glow"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        Established 2005 · Trusted by 5000+ Customers
+      </div>
+      <h1 class="hero-title">
+        <span class="line1">VINAYAK</span>
+        <span class="line2 glitch" data-text="ELECTRONICS">ELECTRONICS</span>
+        <span class="line3">SALES &amp; SERVICE</span>
+      </h1>
+      <p class="hero-sub">
+        <strong>Professional TV, Amplifier, Sound System &amp; Electronics Repair Experts</strong><br>
+        LED TVs · Smart TVs · Home Theaters · CCTV · Inverters · Sound Systems
+      </p>
+      <div class="hero-badges">
+        <span class="badge">ISO Certified</span>
+        <span class="badge">All Brands</span>
+        <span class="badge">Same Day Service</span>
+        <span class="badge">Warranty on Repairs</span>
+        <span class="badge">Free Pickup</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm.5 3v4.3l3 1.7-.5.9L7.5 10V6h1z"/></svg>
+          Book Service
+        </a>
+        <a href="#contact" class="btn-secondary">Contact Us</a>
+        <a href="https://wa.me/919999999999" class="btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp Now
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="5000">0</span><span class="gold">+</span></div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="18">0</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="50">0</span><span class="gold">+</span></div>
+          <div class="stat-label">Brands Serviced</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span class="counter" data-target="98">0</span><span class="gold">%</span></div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Visual -->
+  <div class="hero-visual" aria-hidden="true">
+    <div class="tv-3d">
+      <div class="speaker-float">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="5" width="60" height="70" rx="10" fill="#071828" stroke="rgba(0,212,255,.3)" stroke-width="1.5"/>
+          <circle cx="40" cy="30" r="18" fill="none" stroke="rgba(0,212,255,.5)" stroke-width="2"/>
+          <circle cx="40" cy="30" r="10" fill="rgba(0,212,255,.1)" stroke="rgba(0,212,255,.4)" stroke-width="1.5"/>
+          <circle cx="40" cy="30" r="4" fill="#00d4ff"/>
+          <rect x="28" y="52" width="24" height="16" rx="4" fill="rgba(0,212,255,.1)" stroke="rgba(0,212,255,.3)" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="speaker-float">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="5" width="50" height="50" rx="8" fill="#071828" stroke="rgba(255,215,0,.3)" stroke-width="1.5"/>
+          <circle cx="30" cy="26" r="14" fill="none" stroke="rgba(255,215,0,.4)" stroke-width="1.5"/>
+          <circle cx="30" cy="26" r="7" fill="rgba(255,215,0,.08)" stroke="rgba(255,215,0,.3)" stroke-width="1"/>
+          <circle cx="30" cy="26" r="3" fill="#ffd700"/>
+          <rect x="20" y="44" width="20" height="10" rx="3" fill="rgba(255,215,0,.1)"/>
+        </svg>
+      </div>
+      <div class="tv-screen">
+        <div class="tv-inner-glow"></div>
+        <div class="sound-wave" aria-hidden="true">
+          <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+          <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+          <div class="wave-bar"></div>
+        </div>
+        <div class="tv-brand">VINAYAK ELECTRONICS</div>
+      </div>
+      <div class="tv-stand"></div>
+      <div class="tv-base"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <!-- doubled for seamless loop -->
+    <div class="ticker-item">TV Repair</div>
+    <div class="ticker-item">Amplifier Service</div>
+    <div class="ticker-item">Home Theater Installation</div>
+    <div class="ticker-item">CCTV Setup</div>
+    <div class="ticker-item">Sound Systems</div>
+    <div class="ticker-item">Inverter Repair</div>
+    <div class="ticker-item">Smart TV Setup</div>
+    <div class="ticker-item">UPS Service</div>
+    <div class="ticker-item">Home Automation</div>
+    <div class="ticker-item">Free Pickup & Drop</div>
+    <div class="ticker-item">TV Repair</div>
+    <div class="ticker-item">Amplifier Service</div>
+    <div class="ticker-item">Home Theater Installation</div>
+    <div class="ticker-item">CCTV Setup</div>
+    <div class="ticker-item">Sound Systems</div>
+    <div class="ticker-item">Inverter Repair</div>
+    <div class="ticker-item">Smart TV Setup</div>
+    <div class="ticker-item">UPS Service</div>
+    <div class="ticker-item">Home Automation</div>
+    <div class="ticker-item">Free Pickup & Drop</div>
+  </div>
+</div>
+
+<div class="neon-divider"></div>
+
+<!-- ─── SERVICES ─── -->
+<section id="services" aria-label="Services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-title">Our <span class="accent">Services</span></h2>
+      <p class="section-sub" style="margin:0 auto">Expert solutions for every electronics need — from quick repairs to full installations.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal" style="transition-delay:.05s">
+        <div class="service-icon">📺</div>
+        <h3 class="service-card-title">TV Repair</h3>
+        <p class="service-card-desc">LED, LCD, OLED & Smart TV repair for all brands. Panel replacement, backlight fix, software issues & more.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Book Now →</a>
+          <span class="service-price">From ₹299</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.1s">
+        <div class="service-icon">🎚️</div>
+        <h3 class="service-card-title">Amplifier Repair</h3>
+        <p class="service-card-desc">All types of amplifier servicing — stereo, home theater, car audio. Distortion fix, power issues, component replacement.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Book Now →</a>
+          <span class="service-price">From ₹499</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.15s">
+        <div class="service-icon">🔊</div>
+        <h3 class="service-card-title">Home Theater Setup</h3>
+        <p class="service-card-desc">Professional 5.1, 7.1, Dolby Atmos home theater installation with calibration and acoustic optimization.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Get Quote →</a>
+          <span class="service-price">From ₹1499</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.2s">
+        <div class="service-icon">📷</div>
+        <h3 class="service-card-title">CCTV Installation</h3>
+        <p class="service-card-desc">IP cameras, DVR/NVR setup, remote viewing configuration. Residential & commercial security systems.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Get Quote →</a>
+          <span class="service-price">From ₹2999</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.25s">
+        <div class="service-icon">🎵</div>
+        <h3 class="service-card-title">Sound System Service</h3>
+        <p class="service-card-desc">Speaker repair, subwoofer servicing, soundbar repair. Wiring & acoustic panel installation for studios.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Book Now →</a>
+          <span class="service-price">From ₹399</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.3s">
+        <div class="service-icon">🔋</div>
+        <h3 class="service-card-title">Inverter &amp; UPS Service</h3>
+        <p class="service-card-desc">Battery replacement, PCB repair, charging issues. All major brands — Luminous, Microtek, Amaron & more.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Book Now →</a>
+          <span class="service-price">From ₹349</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.35s">
+        <div class="service-icon">🏠</div>
+        <h3 class="service-card-title">Home Automation</h3>
+        <p class="service-card-desc">Smart home integration, voice control setup, smart lighting & appliance automation with app control.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Get Quote →</a>
+          <span class="service-price">From ₹5999</span>
+        </div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:.4s">
+        <div class="service-icon">🔧</div>
+        <h3 class="service-card-title">Electronics Maintenance</h3>
+        <p class="service-card-desc">Annual maintenance contracts, preventive servicing, cleaning & firmware updates for all your electronics.</p>
+        <div class="service-card-footer">
+          <a href="#contact" class="service-link">Get AMC →</a>
+          <span class="service-price">From ₹999/yr</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider"></div>
+
+<!-- ─── WHY US ─── -->
+<section id="why" aria-label="Why Choose Us">
+  <div class="container">
+    <div class="why-inner">
+      <div class="reveal-left">
+        <div class="section-tag">Why Choose Us</div>
+        <h2 class="section-title">The <span class="accent">Vinayak</span><br>Difference</h2>
+        <p class="section-sub">18 years of trust, expertise and genuine care for your electronics.</p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="feature-num">01</div>
+            <div class="feature-body">
+              <h4>Certified Technicians</h4>
+              <p>All our engineers are factory-trained and certified by leading brands like Samsung, LG, Sony & more.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="feature-num">02</div>
+            <div class="feature-body">
+              <h4>Genuine Spare Parts</h4>
+              <p>We use only OEM and original spare parts — no low-quality replacements, ever.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="feature-num">03</div>
+            <div class="feature-body">
+              <h4>90-Day Repair Warranty</h4>
+              <p>All repairs backed by a 90-day service warranty. Peace of mind guaranteed.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="feature-num">04</div>
+            <div class="feature-body">
+              <h4>Same-Day Doorstep Service</h4>
+              <p>Book online, we come to you. Free pickup & drop service within the city.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="feature-num">05</div>
+            <div class="feature-body">
+              <h4>Transparent Pricing</h4>
+              <p>No hidden charges. Get a free diagnosis and clear quote before any work begins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual reveal-right">
+        <div class="hexgrid" aria-hidden="true">
+          <div class="hex-item">📺<p>LED TV</p></div>
+          <div class="hex-item">🎚️<p>AMPLIFIER</p></div>
+          <div class="hex-item">🔊<p>THEATER</p></div>
+          <div class="hex-item">📷<p>CCTV</p></div>
+          <div class="hex-item">🔋<p>INVERTER</p></div>
+          <div class="hex-item">🎵<p>AUDIO</p></div>
+          <div class="hex-item">🏠<p>SMART</p></div>
+          <div class="hex-item">📡<p>UPS</p></div>
+          <div class="hex-item">🔧<p>REPAIR</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider"></div>
+
+<!-- ─── STATS ─── -->
+<section id="stats" aria-label="Statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="counter-block reveal">
+        <span class="counter-icon">🏆</span>
+        <span class="counter-num" data-target="5000">0</span><span style="font-family:Orbitron;font-size:3.5rem;font-weight:900;color:var(--electric)">+</span>
+        <span class="counter-label">Repairs Completed</span>
+      </div>
+      <div class="counter-block reveal" style="transition-delay:.1s">
+        <span class="counter-icon">⭐</span>
+        <span class="counter-num gold" data-target="18">0</span>
+        <span class="counter-label">Years of Excellence</span>
+      </div>
+      <div class="counter-block reveal" style="transition-delay:.2s">
+        <span class="counter-icon">🏪</span>
+        <span class="counter-num" data-target="50">0</span><span style="font-family:Orbitron;font-size:3.5rem;font-weight:900;color:var(--electric)">+</span>
+        <span class="counter-label">Brands Serviced</span>
+      </div>
+      <div class="counter-block reveal" style="transition-delay:.3s">
+        <span class="counter-icon">😊</span>
+        <span class="counter-num gold" data-target="98">0</span><span style="font-family:Orbitron;font-size:3.5rem;font-weight:900;color:var(--neon-gold)">%</span>
+        <span class="counter-label">Customer Satisfaction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider"></div>
+
+<!-- ─── PRODUCTS ─── -->
+<section id="products" aria-label="Products">
+  <div class="container">
+    <div class="products-header reveal">
+      <div class="section-tag">Featured Products</div>
+      <h2 class="section-title">Premium <span class="gold">Electronics</span></h2>
+      <p class="section-sub" style="margin:0 auto">Top brands at competitive prices — all tested, warranted and ready.</p>
+    </div>
+    <div class="products-tabs reveal">
+      <button class="tab-btn active" data-tab="all">All Products</button>
+      <button class="tab-btn" data-tab="tv">Televisions</button>
+      <button class="tab-btn" data-tab="audio">Audio</button>
+      <button class="tab-btn" data-tab="cctv">CCTV</button>
+      <button class="tab-btn" data-tab="power">Power</button>
+    </div>
+    <div class="products-grid" id="products-grid">
+      <!-- Products injected by JS -->
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider"></div>
+
+<!-- ─── ABOUT ─── -->
+<section id="about" aria-label="About Us">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-visual-block reveal-left">
+        <div class="about-img-frame">
+          <div class="about-img-inner">
+            <div class="about-metric">
+              <span class="about-metric-num">★ 4.9</span>
+              <div class="about-metric-label">Google Rating</div>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-num">18+</span>
+              <div class="about-metric-label">Years Active</div>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-num">ISO</span>
+              <div class="about-metric-label">Certified Center</div>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-num">24H</span>
+              <div class="about-metric-label">Turnaround</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-corner tl">✦ Trusted Since 2005</div>
+        <div class="about-corner br">⚡ 5000+ Customers</div>
+      </div>
+      <div class="about-text reveal-right">
+        <div class="section-tag">About Us</div>
+        <h2 class="section-title">Your City's Most <span class="accent">Trusted</span> Electronics Expert</h2>
+        <p class="section-sub">Vinayak Electronics was founded in 2005 with a simple mission: provide honest, expert electronics repair and sales that people can trust. What started as a small TV repair shop has grown into a full-service electronics destination.</p>
+        <div class="about-timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2005</div>
+            <div class="timeline-body">
+              <h4>Founded</h4>
+              <p>Started as a TV repair center with 2 technicians.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-body">
+              <h4>Expanded Services</h4>
+              <p>Added home theater, amplifier and CCTV services.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-body">
+              <h4>ISO Certification</h4>
+              <p>Obtained ISO certification and opened showroom.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-body">
+              <h4>Home Automation</h4>
+              <p>Launched smart home and home automation division.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-body">
+              <h4>5000+ Customers Served</h4>
+              <p>Continued growth with 10+ expert technicians on team.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider"></div>
+
+<!-- ─── GALLERY ─── -->
+<section id="gallery" aria-label="Gallery">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <div class="section-tag">Our Work</div>
+      <h2 class="section-title">Work <span class="accent">Gallery</span></h2>
+      <p class="section-sub" style="margin:0 auto">Real work. Real results. Browse our installations and repairs.</p>
+    </div>
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">TV Repairs</button>
+      <button class="filter-btn">Installations</button>
+      <button class="filter-btn">CCTV</button>
+      <button class="filter-btn">Home Theater</button>
+    </div>
+    <div class="gallery-grid reveal" id="gallery-grid">
+      <div class="gallery-item wide" style="font-size:5rem;background:linear-gradient(135deg,#071828,#0a2035)">
+        📺
+        <div class="gallery-overlay"><h4>Smart TV Wall Mount</h4><p>65" OLED installed with full cable management</p></div>
+      </div>
+      <div class="gallery-item tall" style="font-size:5rem;background:linear-gradient(135deg,#0a2035,#071828)">
+        🔊
+        <div class="gallery-overlay"><h4>5.1 Home Theater</h4><p>Complete Dolby Atmos setup with acoustic treatment</p></div>
+      </div>
+      <div class="gallery-item" style="font-size:4rem;background:linear-gradient(135deg,#071828,#061520)">
+        📷
+        <div class="gallery-overlay"><h4>CCTV Installation</h4><p>16-camera IP surveillance system</p></div>
+      </div>
+      <div class="gallery-item" style="font-size:4rem;background:linear-gradient(135deg,#0a2035,#071828)">
+        🎚️
+        <div class="gallery-overlay"><h4>Amplifier Repair</h4><p>Before & after — complete PCB restoration</p></div>
+      </div>
+      <div class="gallery-item" style="font-size:4rem;background:linear-gradient(135deg,#071828,#0a2035)">
+        🔋
+        <div class="gallery-overlay"><h4>Inverter Service</h4><p>Battery replacement and PCB repair</p></div>
+      </div>
+      <div class="gallery-item" style="font-size:4rem;background:linear-gradient(135deg,#061520,#0a2035)">
+        🏠
+        <div class="gallery-overlay"><h4>Smart Home Setup</h4><p>Full home automation with voice control</p></div>
+      </div>
+      <div class="gallery-item wide" style="font-size:5rem;background:linear-gradient(135deg,#0a2035,#061520)">
+        🎵
+        <div class="gallery-overlay"><h4>Recording Studio</h4><p>Professional audio setup with acoustic panels</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider"></div>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section id="testimonials" aria-label="Customer Reviews">
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <div class="section-tag">Customer Reviews</div>
+      <h2 class="section-title">What Customers <span class="accent">Say</span></h2>
+    </div>
+    <div class="testimonials-carousel reveal">
+      <div class="testimonials-track" id="testimonials-track">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <p class="testimonial-text">My 55" Samsung TV had a blank screen. Vinayak Electronics diagnosed and fixed it within the same day. Excellent service, very honest pricing. Highly recommend!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RK</div>
+            <div>
+              <div class="author-name">Rajesh Kumar</div>
+              <div class="author-location">📍 Sector 14, Delhi</div>
+              <div class="author-verified">✓ Verified Customer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <p class="testimonial-text">Got a complete 7.1 home theater installed by their team. The setup is flawless — they even calibrated the sound for our room size. Worth every rupee!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PS</div>
+            <div>
+              <div class="author-name">Priya Sharma</div>
+              <div class="author-location">📍 Andheri West, Mumbai</div>
+              <div class="author-verified">✓ Verified Customer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <p class="testimonial-text">Had 8 CCTV cameras installed for my office. Professional installation, clean wiring, and they set up remote viewing on my phone. Very happy!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div>
+              <div class="author-name">Arun Mehta</div>
+              <div class="author-location">📍 Koramangala, Bangalore</div>
+              <div class="author-verified">✓ Verified Customer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <p class="testimonial-text">My old amplifier was making noise. They fixed it in 2 days, explained the problem clearly, and gave 3 months warranty. Outstanding technicians!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SD</div>
+            <div>
+              <div class="author-name">Suresh Desai</div>
+              <div class="author-location">📍 Banjara Hills, Hyderabad</div>
+              <div class="author-verified">✓ Verified Customer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <p class="testimonial-text">Free pickup and drop is a game changer. My LG TV remote issues were fixed, and the engineer even cleaned the inside. Transparent billing — no surprises.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">NR</div>
+            <div>
+              <div class="author-name">Nisha Rao</div>
+              <div class="author-location">📍 Anna Nagar, Chennai</div>
+              <div class="author-verified">✓ Verified Customer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="prev-btn" aria-label="Previous">‹</button>
+      <div class="carousel-dots" id="carousel-dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <button class="carousel-btn" id="next-btn" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider"></div>
+
+<!-- ─── FAQ ─── -->
+<section id="faq" aria-label="Frequently Asked Questions">
+  <div class="container">
+    <div class="faq-inner">
+      <div class="reveal-left">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">Common <span class="accent">Questions</span></h2>
+        <p class="section-sub">Everything you need to know before booking a service.</p>
+        <div style="margin-top:2rem">
+          <a href="#contact" class="btn-primary">Ask Us Anything</a>
+        </div>
+      </div>
+      <div class="faq-list reveal-right" id="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Do you offer doorstep repair? <span>+</span></button>
+          <div class="faq-a">Yes! We offer free pickup and doorstep service within the city. Book online or WhatsApp us and our technician will be at your location within hours.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How long does a TV repair take? <span>+</span></button>
+          <div class="faq-a">Most TV repairs are completed within 24–48 hours. Simple issues like software faults or backlight repair can be done same-day. Complex panel replacements may take 3–5 days depending on part availability.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is there a warranty on repairs? <span>+</span></button>
+          <div class="faq-a">Yes. All our repairs come with a 90-day service warranty. If the same issue recurs within 90 days, we fix it free of charge.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you use original spare parts? <span>+</span></button>
+          <div class="faq-a">Absolutely. We use only OEM and genuine spare parts sourced directly from authorized distributors. We never use low-quality or counterfeit components.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What brands do you service? <span>+</span></button>
+          <div class="faq-a">We service all major brands including Samsung, LG, Sony, OnePlus, Mi, TCL, Panasonic, Sharp, Philips and 40+ more brands for TVs, amplifiers and other electronics.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How do I get a repair estimate? <span>+</span></button>
+          <div class="faq-a">Simply fill out our contact form or WhatsApp us. Our technician will do a free diagnosis and provide a transparent quote before starting any work. No surprise charges ever.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-divider"></div>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact" aria-label="Contact Us">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="reveal-left">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Contact <span class="accent">Us</span></h2>
+        <p class="section-sub">Book a repair, get a quote, or just ask us anything. We respond within minutes.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div class="contact-item-body">
+              <h4>Phone / WhatsApp</h4>
+              <p><a href="tel:+919999999999">+91 99999 99999</a></p>
+              <p><a href="tel:+919888888888">+91 98888 88888</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div class="contact-item-body">
+              <h4>Email</h4>
+              <p><a href="mailto:service@vinayakelectronics.in">service@vinayakelectronics.in</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-body">
+              <h4>Our Location</h4>
+              <p>123, Main Market Road<br>Your City – 000000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div class="contact-item-body">
+              <h4>Working Hours</h4>
+              <div class="hours-grid">
+                <div class="hours-row"><span>Mon–Sat</span><span>9 AM – 8 PM</span></div>
+                <div class="hours-row"><span>Sunday</span><span>10 AM – 6 PM</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="contact-form-wrap">
+          <div class="form-title">⚡ Book a Service / Get a Quote</div>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group" id="fg-name">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name">
+                <div class="form-error-msg" id="err-name">Please enter your name.</div>
+              </div>
+              <div class="form-group" id="fg-phone">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+                <div class="form-error-msg" id="err-phone">Please enter a valid 10-digit number.</div>
+              </div>
+            </div>
+            <div class="form-group" id="fg-email">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email">
+              <div class="form-error-msg" id="err-email">Please enter a valid email address.</div>
+            </div>
+            <div class="form-group" id="fg-service">
+              <label for="service">Service Required *</label>
+              <select id="service" name="service">
+                <option value="">— Select a Service —</option>
+                <option>TV Repair</option>
+                <option>Amplifier Repair</option>
+                <option>Home Theater Installation</option>
+                <option>CCTV Installation</option>
+                <option>Sound System Service</option>
+                <option>Inverter / UPS Service</option>
+                <option>Home Automation</option>
+                <option>Electronics Maintenance / AMC</option>
+                <option>Product Purchase Inquiry</option>
+                <option>Other</option>
+              </select>
+              <div class="form-error-msg" id="err-service">Please select a service.</div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message / Description</label>
+              <textarea id="message" name="message" placeholder="Describe your issue or ask a question..."></textarea>
+            </div>
+            <!-- Honeypot spam protection -->
+            <div style="display:none"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+            <button type="submit" class="form-submit" id="submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              Send Message
+            </button>
+          </form>
+          <div class="form-success" id="form-success">
+            <div style="font-size:2.5rem;margin-bottom:.8rem">✅</div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you! We'll contact you within 30 minutes during working hours. You should receive a confirmation email shortly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">VINAYAK <span>ELECTRONICS</span></a>
+        <p>Your trusted electronics sales, service & solutions center since 2005. Serving 5000+ happy customers with integrity and expertise.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="https://wa.me/919999999999" class="social-btn" aria-label="WhatsApp">wa</a>
+          <a href="#" class="social-btn" aria-label="YouTube">yt</a>
+          <a href="#" class="social-btn" aria-label="Google">g</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">TV Repair</a></li>
+          <li><a href="#services">Amplifier Repair</a></li>
+          <li><a href="#services">Home Theater</a></li>
+          <li><a href="#services">CCTV Installation</a></li>
+          <li><a href="#services">Inverter Service</a></li>
+          <li><a href="#services">Home Automation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul class="footer-links">
+          <li><a href="#products">LED TVs</a></li>
+          <li><a href="#products">Smart TVs</a></li>
+          <li><a href="#products">Speakers</a></li>
+          <li><a href="#products">Amplifiers</a></li>
+          <li><a href="#products">CCTV Cameras</a></li>
+          <li><a href="#products">Inverters & UPS</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Vinayak Electronics. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+      <p>🏆 Trusted Electronics Service Center | ⭐ 4.9/5 Google Rating | 📍 Your City</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+// ─── PRELOADER ───
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const p = document.getElementById('preloader');
+    p.style.opacity = '0';
+    setTimeout(() => p.style.display = 'none', 600);
+  }, 2200);
+});
+
+// ─── CUSTOM CURSOR ───
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  ring.style.left = e.clientX + 'px';
+  ring.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('a,button,.service-card,.product-card,.gallery-item').forEach(el => {
+  el.addEventListener('mouseenter', () => { ring.style.transform = 'translate(-50%,-50%) scale(2)'; ring.style.opacity = '.3'; });
+  el.addEventListener('mouseleave', () => { ring.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.opacity = '.5'; });
+});
+
+// ─── BACKGROUND PARTICLES CANVAS ───
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+let W = canvas.width = window.innerWidth;
+let H = canvas.height = window.innerHeight;
+window.addEventListener('resize', () => { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; });
+
+const particles = [];
+const ICONS = ['◈','◉','⬡','▲','◆','⚡','✦','○'];
+for(let i=0;i<60;i++){
+  particles.push({
+    x: Math.random()*W, y: Math.random()*H,
+    vx: (Math.random()-.5)*.3, vy: (Math.random()-.5)*.3,
+    size: Math.random()*12+4,
+    alpha: Math.random()*.15+.03,
+    icon: ICONS[Math.floor(Math.random()*ICONS.length)],
+    color: Math.random()>.5 ? '#00d4ff' : '#ffd700'
+  });
+}
+
+function drawParticles(){
+  ctx.clearRect(0,0,W,H);
+  particles.forEach(p => {
+    p.x += p.vx; p.y += p.vy;
+    if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+    if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+    ctx.globalAlpha = p.alpha;
+    ctx.fillStyle = p.color;
+    ctx.font = `${p.size}px "Orbitron"`;
+    ctx.fillText(p.icon, p.x, p.y);
+  });
+  ctx.globalAlpha = 1;
+  // circuit lines
+  ctx.strokeStyle = 'rgba(0,212,255,0.04)';
+  ctx.lineWidth = 1;
+  for(let i=0;i<particles.length;i++){
+    for(let j=i+1;j<particles.length;j++){
+      const d = Math.hypot(particles[i].x-particles[j].x, particles[i].y-particles[j].y);
+      if(d<130){
+        ctx.globalAlpha = (1-d/130)*.04;
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x,particles[i].y);
+        ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+  ctx.globalAlpha=1;
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
+
+// ─── NAV SCROLL ───
+window.addEventListener('scroll', () => {
+  document.getElementById('main-nav').classList.toggle('scrolled', scrollY > 50);
+});
+
+// ─── HAMBURGER ───
+document.getElementById('hamburger').addEventListener('click', () => {
+  const links = document.querySelector('.nav-links');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  links.style.flexDirection = 'column';
+  links.style.position = 'absolute';
+  links.style.top = '72px';
+  links.style.left = '0';
+  links.style.width = '100%';
+  links.style.background = 'rgba(2,11,24,.97)';
+  links.style.padding = '1rem 5%';
+  links.style.gap = '1rem';
+});
+
+// ─── SCROLL REVEAL ───
+const reveals = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+reveals.forEach(el => io.observe(el));
+
+// ─── COUNTER ANIMATION ───
+function animateCounter(el){
+  const target = parseInt(el.getAttribute('data-target'));
+  const dur = 2000;
+  const step = target / (dur/16);
+  let cur = 0;
+  const t = setInterval(() => {
+    cur = Math.min(cur+step, target);
+    el.textContent = Math.floor(cur).toLocaleString();
+    if(cur>=target) clearInterval(t);
+  }, 16);
+}
+const counterIO = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ animateCounter(e.target); counterIO.unobserve(e.target); } });
+}, { threshold:.5 });
+document.querySelectorAll('.counter,.counter-num[data-target]').forEach(el => counterIO.observe(el));
+
+// ─── PRODUCTS DATA ───
+const products = [
+  { name:'Samsung 55" OLED TV', brand:'Samsung', emoji:'📺', badge:'HOT', price:'₹89,990', old:'₹1,09,000', rating:5, tab:'tv' },
+  { name:'LG 65" 4K Smart TV', brand:'LG', emoji:'🖥️', badge:'NEW', price:'₹75,500', old:'₹90,000', rating:5, tab:'tv' },
+  { name:'Onkyo 5.1 Receiver', brand:'Onkyo', emoji:'🎚️', badge:'', price:'₹28,000', old:'₹35,000', rating:4, tab:'audio' },
+  { name:'Yamaha Soundbar 2.1', brand:'Yamaha', emoji:'🔊', badge:'SALE', price:'₹12,999', old:'₹17,000', rating:5, tab:'audio' },
+  { name:'Hikvision 4-Cam Kit', brand:'Hikvision', emoji:'📷', badge:'', price:'₹8,500', old:'₹11,000', rating:5, tab:'cctv' },
+  { name:'CP Plus IP Camera', brand:'CP Plus', emoji:'🔭', badge:'', price:'₹3,200', old:'₹4,500', rating:4, tab:'cctv' },
+  { name:'Luminous 1.5kVA UPS', brand:'Luminous', emoji:'🔋', badge:'', price:'₹7,999', old:'₹9,500', rating:5, tab:'power' },
+  { name:'Microtek Inverter 850VA', brand:'Microtek', emoji:'⚡', badge:'', price:'₹4,200', old:'₹5,500', rating:4, tab:'power' },
+];
+
+function renderProducts(filter='all'){
+  const grid = document.getElementById('products-grid');
+  const filtered = filter==='all' ? products : products.filter(p=>p.tab===filter);
+  grid.innerHTML = filtered.map(p=>`
+    <div class="product-card reveal">
+      <div class="product-img">
+        ${p.badge ? `<div class="product-badge">${p.badge}</div>` : ''}
+        <span>${p.emoji}</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">${p.name}</div>
+        <div class="product-brand">${p.brand}</div>
+        <div class="product-rating">
+          ${'<span class="star">★</span>'.repeat(p.rating)}${p.rating<5?'<span class="star half">★</span>':''}
+        </div>
+        <div class="product-price-row">
+          <div class="product-price">${p.price}<span class="old">${p.old}</span></div>
+          <button class="product-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">ENQUIRE</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  // re-observe new cards
+  grid.querySelectorAll('.reveal').forEach(el => { io.observe(el); });
+}
+renderProducts();
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    renderProducts(btn.dataset.tab);
+  });
+});
+
+// ─── TESTIMONIALS CAROUSEL ───
+const track = document.getElementById('testimonials-track');
+const dots = document.querySelectorAll('.dot');
+let cur = 0, cardWidth, total;
+
+function getWidth(){
+  const w = window.innerWidth;
+  return w < 768 ? 90 : 33.33;
+}
+function goTo(n){
+  const cards = track.querySelectorAll('.testimonial-card');
+  total = cards.length;
+  const pct = getWidth();
+  cur = Math.max(0, Math.min(n, total-1));
+  track.style.transform = `translateX(-${cur * (pct+1.5)}%)`;
+  dots.forEach((d,i)=>d.classList.toggle('active', i===cur%dots.length));
+}
+document.getElementById('prev-btn').addEventListener('click',()=>goTo(cur-1));
+document.getElementById('next-btn').addEventListener('click',()=>goTo(cur+1));
+dots.forEach((d,i)=>d.addEventListener('click',()=>goTo(i)));
+let autoSlide = setInterval(()=>goTo(cur+1 >= track.querySelectorAll('.testimonial-card').length ? 0 : cur+1), 4000);
+track.addEventListener('mouseenter',()=>clearInterval(autoSlide));
+track.addEventListener('mouseleave',()=>autoSlide=setInterval(()=>goTo(cur+1>=track.querySelectorAll('.testimonial-card').length?0:cur+1),4000));
+
+// ─── FAQ ───
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+
+// ─── CONTACT FORM ───
+const form = document.getElementById('contact-form');
+function showError(fgId, show){ document.getElementById(fgId).classList.toggle('error', show); }
+function validate(){
+  let ok = true;
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const service = document.getElementById('service').value;
+  if(!name){ showError('fg-name',true); ok=false; } else showError('fg-name',false);
+  if(!/^\d{10}$/.test(phone.replace(/\D/g,''))){ showError('fg-phone',true); ok=false; } else showError('fg-phone',false);
+  if(email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showError('fg-email',true); ok=false; } else showError('fg-email',false);
+  if(!service){ showError('fg-service',true); ok=false; } else showError('fg-service',false);
+  return ok;
+}
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if(!validate()) return;
+  // Spam check
+  if(form._gotcha && form._gotcha.value) return;
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true; btn.textContent = 'Sending...';
+
+  /* ── INTEGRATION GUIDE ──────────────────────────────────────────────────
+   * OPTION A — Formspree (easiest, no backend needed):
+   *   1. Go to https://formspree.io and create a free account
+   *   2. Create a form and copy your endpoint, e.g. https://formspree.io/f/xyzabcde
+   *   3. Replace the fetch URL below with your Formspree endpoint
+   *   4. Formspree automatically emails the admin AND can send customer confirmation
+   *
+   * OPTION B — EmailJS (client-side email):
+   *   1. Go to https://emailjs.com, create account
+   *   2. Add email service (Gmail), create email template
+   *   3. Replace code below with EmailJS SDK call
+   *
+   * OPTION C — Netlify Forms:
+   *   1. Host site on Netlify
+   *   2. Add data-netlify="true" to <form> tag and a hidden input: name="_form-name" value="contact"
+   *   3. Netlify captures form automatically
+   *
+   * OPTION D — Supabase (database storage):
+   *   1. Create project at https://supabase.com
+   *   2. Create table: leads (name, phone, email, service, message, created_at)
+   *   3. Use Supabase JS client to insert row on submit
+   ─────────────────────────────────────────────────────────────────────── */
+
+  // Simulate form submission (replace with real integration)
+  await new Promise(r => setTimeout(r, 1500));
+
+  form.style.display = 'none';
+  document.getElementById('form-success').classList.add('show');
+  btn.disabled = false;
+});
+
+// ─── GALLERY FILTER BUTTONS ───
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    // In a real implementation, filter gallery items here
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.style.animation = 'none';
+      item.style.opacity='0';
+      setTimeout(()=>{item.style.opacity='1';item.style.transition='opacity .4s';},50);
+    });
+  });
+});
+
+// ─── PARALLAX HERO ───
+window.addEventListener('scroll', () => {
+  const hero = document.querySelector('.hero-visual');
+  if(hero) hero.style.transform = `translateY(calc(-50% + ${scrollY * .1}px))`;
+  const heroBg = document.querySelector('.hero-bg-glow');
+  if(heroBg) heroBg.style.transform = `translateX(-50%) translateY(${scrollY*.05}px)`;
+});
+
+// ─── MOUSE PARALLAX on hero ───
+document.getElementById('hero').addEventListener('mousemove', e => {
+  const { clientX: x, clientY: y } = e;
+  const cx = window.innerWidth/2, cy = window.innerHeight/2;
+  const dx = (x-cx)/cx, dy = (y-cy)/cy;
+  const vis = document.querySelector('.tv-screen');
+  if(vis) vis.style.transform = `translateY(0) rotateY(${-5 + dx*5}deg) rotateX(${dy*3}deg)`;
+});
+</script>
+</body>
+</html>
